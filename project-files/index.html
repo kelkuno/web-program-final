@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Rooftop Forecasting</title>
+    </head>
+    <body>
+        <h1>Rooftop Forecasting</h1>
+        <div id="app">
+            <div v-for="forecast in weather" :key="forecast.id">
+                <p>{{forecast.min_temp}}</p>
+                <p>{{forecast.max_temp}}</p>
+            </div>
+        </div>
+        <script src="vendors/axios.js"></script>
+        <script src="vendors/vue.js"></script>
+        <script src="js/script.js"></script>
+    </body>
+</html>
