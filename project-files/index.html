@@ -2,17 +2,68 @@
 <html>
     <head>
         <title>Rooftop Forecasting</title>
+        <link href="https://fonts.googleapis.com/css?family=Bungee+Shade|Montserrat" rel="stylesheet">
+        <link rel="stylesheet" href="styles/style.css">
     </head>
     <body>
         <h1>Rooftop Forecasting</h1>
-        <div id="app">
-            <div v-for="forecast in weather" :key="forecast.id">
-                <p>{{forecast.min_temp}}</p>
-                <p>{{forecast.max_temp}}</p>
+        <h3>Minneapolis, MN</h3>
+        <div class="five-day-forecast" id="app">
+            <div v-for="forecast in weather" :key="forecast.dt">
+                <p>{{forecast.dt_txt}}</p>
+                <p>{{forecast.main.temp}}</p>
             </div>
+            <div>
+                <p>{{current.main}}</p>
+            </div>
+           
         </div>
+        
         <script src="vendors/axios.js"></script>
         <script src="vendors/vue.js"></script>
         <script src="js/script.js"></script>
     </body>
 </html>
+<!--<div id="app">
+    <div v-for="forecast in weather" :key="forecast.id">
+        <p>{{forecast.min_temp}}</p>
+        <p>{{forecast.max_temp}}</p>
+    </div>
+</div>-->
+
+<!-- <div class="forecast" id="day-1">
+                <h2>55&#176F</h2>
+                <h4>May 2, 2019</h4>
+                <p><strong>max:</strong>60&#176F</p>
+                <p><strong>min:</strong>50&#176F</p>
+                <p>Weather condition...</p>
+            </div>
+            <div class="forecast" id="day-2">
+                <h2>58&#176F</h2>
+                <h4>May 3, 2019</h4>
+                <p><strong>max:</strong>64&#176F</p>
+                <p><strong>min:</strong>50&#176F</p>
+                <p>Weather condition...</p>
+
+            </div>
+            <div class="forecast" id="day-3">
+                <h2>65&#176F</h2>
+                <h4>May 4, 2019</h4>
+                <p><strong>max:</strong>70&#176F</p>
+                <p><strong>min:</strong>55&#176F</p>
+                <p>Weather condition...</p>
+            </div>
+            <div class="forecast" id="day-4">
+                <h2>72&#176F</h2>
+                <h4>May 5, 2019</h4>
+                <p><strong>max:</strong>75&#176F</p>
+                <p><strong>min:</strong>68&#176F</p>
+                <p>Weather condition...</p>
+            </div>
+            <div class="forecast" id="day-5">
+                <h2>60&#176F</h2>
+                <h4>May 6, 2019</h4>
+                <p><strong>max:</strong>63&#176F</p>
+                <p><strong>min:</strong>50&#176F</p>
+                <p>Weather condition...</p>
+            </div>-->

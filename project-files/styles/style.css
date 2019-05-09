@@ -1,0 +1,52 @@
+html {
+    background-color: lightgrey;
+}
+.five-day-forecast {
+    display: flex;
+}
+.forecast {
+    flex: 1;
+    padding: 1rem;
+    margin: 1rem;
+}
+body {
+    color: blue;
+    font-family: arial;
+}
+h2 {
+    font-family: 'Bungee Shade', cursive;
+    font-size: 2rem;
+}
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+}
+h3 {
+    text-align: right;
+    margin: 0 2rem 0 0;
+}
+h4 {
+    font-style: italic;
+}
+.forecast#day-1 {
+    background: rgb(195,234,242);
+    background: linear-gradient(180deg, rgba(195,234,242,0) 0%, rgba(195,234,242,1) 48%, rgba(255,101,0,1) 100%);
+}
+.forecast#day-2 {
+    background: rgb(195,234,242);
+    background: linear-gradient(180deg, rgba(195,234,242,0) 0%, rgba(195,234,242,1) 45%, rgba(255,101,0,1) 100%);
+}
+.forecast#day-3 {
+    background: rgb(195,234,242);
+    background: linear-gradient(180deg, rgba(195,234,242,0) 0%, rgba(195,234,242,1) 28%, rgba(255,101,0,1) 100%);
+
+}
+.forecast#day-4 {
+    background: rgb(195,234,242);
+    background: linear-gradient(180deg, rgba(195,234,242,0) 0%, rgba(195,234,242,1) 23%, rgba(255,101,0,1) 100%);
+}
+.forecast#day-5 {
+    background: rgb(195,234,242);
+    background: linear-gradient(180deg, rgba(195,234,242,0) 0%, rgba(195,234,242,1) 47%, rgba(255,101,0,1) 100%);
+}
