@@ -4,6 +4,7 @@ var vm = new Vue ({
     data: {
         weather: [],
         current: {}
+
     },
     methods: {
         getWeather: function () {
@@ -18,7 +19,6 @@ var vm = new Vue ({
                 vm.current = response.data;
             });
         },
-
     },
     created: function() {
         this.getWeather();

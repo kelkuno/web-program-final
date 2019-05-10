@@ -9,9 +9,11 @@
         <h1>Rooftop Forecasting</h1>
         <h3>Minneapolis, MN</h3>
         <div class="five-day-forecast" id="app">
-            <div v-for="forecast in weather" :key="forecast.dt">
-                <p>{{forecast.dt_txt}}</p>
-                <p>{{forecast.main.temp}}</p>
+            <div v-for="(forecast, index) in weather" :key="forecast.dt">
+            <p v-if="index===0">{{forecast.dt_txt}}</p>
+            <p v-if="index===8">{{forecast.dt_txt}}</p>
+            <p v-if="index===16">{{forecast.dt_txt}}</p>
+
             </div>
             <div>
                 <p>{{current.main}}</p>
