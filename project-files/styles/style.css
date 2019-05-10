@@ -1,17 +1,6 @@
+/*************************global styles***************************/
 html {
-    background-color: lightgrey;
-}
-.five-day-forecast {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-}
-.forecast {
-    flex: 1 1 35%;
-    padding: 1rem;
-    margin: 1rem 0;
-    border: solid 2px blue;
-    max-width: 35%;
+    background-color: #d3d3d3;
 }
 body {
     color: blue;
@@ -19,9 +8,10 @@ body {
     width: 800px;
     margin: auto;
 }
-h2 {
+em {
     font-family: 'Bungee Shade', cursive;
-    font-size: 1.5rem;
+    font-size: 2rem;
+    font-style: normal;
 }
 h1 {
     font-family: 'Montserrat', sans-serif;
@@ -31,35 +21,67 @@ h1 {
 h3 {
     text-align: right;
     margin: 0 2rem 2rem 0;
+    font-weight: normal;
 }
 h4 {
     font-style: italic;
+    text-align: right;
+}
+h5 {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.5rem;
+}
+/********************structural styling*************************/
+.five-day-forecast {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.forecast {
+    flex: 1 1 35%;
+    padding: 1rem;
+    margin: 1rem 0;
+    max-width: 35%;
+    text-align: center;
+    border: solid blue 2px;
 }
 .todays-forecast {
-    border: solid 2px green;
     text-align: center;
     margin: auto;
     width: 710px;
+    border: solid blue 2px;
 }
 
-/*.forecast#day-1 {
+/*************************gradiant classes*******************/
+
+.forties {
     background: rgb(195,234,242);
-    background: linear-gradient(180deg, rgba(195,234,242,0) 0%, rgba(195,234,242,1) 48%, rgba(255,101,0,1) 100%);
+    background: linear-gradient(180deg, rgba(195,234,242,1) 0%, rgba(211,211,211,0) 60%, rgba(255,101,0,1) 100%);
 }
-.forecast#day-2 {
+.fifties {
     background: rgb(195,234,242);
-    background: linear-gradient(180deg, rgba(195,234,242,0) 0%, rgba(195,234,242,1) 45%, rgba(255,101,0,1) 100%);
+    background: linear-gradient(180deg, rgba(195,234,242,1) 0%, rgba(211,211,211,0) 50%, rgba(255,101,0,1) 100%);
 }
-.forecast#day-3 {
+.sixties {
     background: rgb(195,234,242);
-    background: linear-gradient(180deg, rgba(195,234,242,0) 0%, rgba(195,234,242,1) 28%, rgba(255,101,0,1) 100%);
+    background: linear-gradient(180deg, rgba(195,234,242,1) 0%, rgba(211,211,211,0) 40%, rgba(255,101,0,1) 100%);
 
 }
-.forecast#day-4 {
+.seventies {
     background: rgb(195,234,242);
-    background: linear-gradient(180deg, rgba(195,234,242,0) 0%, rgba(195,234,242,1) 23%, rgba(255,101,0,1) 100%);
+    background: linear-gradient(180deg, rgba(195,234,242,1) 0%, rgba(211,211,211,0) 30%, rgba(255,101,0,1) 100%);
 }
-.forecast#day-5 {
+.eighties {
     background: rgb(195,234,242);
-    background: linear-gradient(180deg, rgba(195,234,242,0) 0%, rgba(195,234,242,1) 47%, rgba(255,101,0,1) 100%);
+    background: linear-gradient(180deg, rgba(195,234,242,1) 0%, rgba(211,211,211,0) 20%, rgba(255,101,0,1) 100%);
+}
+.nineties {
+    background: rgb(195,234,242);
+    background: linear-gradient(180deg, rgba(195,234,242,1) 0%, rgba(211,211,211,0) 10%, rgba(255,101,0,1) 100%);
+}
+.too-cold {
+    background: rgb(195,234,242);
+    background: linear-gradient(180deg, rgba(195,234,242,1) 0%, rgba(211,211,211,0) 100%, rgba(255,101,0,1) 100%);
 }

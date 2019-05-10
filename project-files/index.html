@@ -7,35 +7,40 @@
     </head>
     <body>
         <h1>Rooftop Forecasting</h1>
+        <h4>Is it warm enough to get happy hour outside?</h4>
         <h3>Minneapolis, MN</h3>
         <div id="app" v-cloak>
+            <h5>Today's forecast</h5>
             <div class="todays-forecast">
-                <p>Today's forecast</p>
-                <h2>{{current.main.temp}}&#176F</h2>
+                <p>Current Temp: <em>{{current.main.temp}}&#176F</em></p>
                 <p>Description: {{current.weather[0].description}}</p>
             </div><!--end of .todays-forecast-->
+            <h5>5-Day Forecast</h5>
             <div class="five-day-forecast">
-                <div class="forecast" v-if="index===0" v-for="(forecast, index) in theWeather" :key="forecast.dt">
-                    <h2>{{forecast.main.temp}}&#176F</h2>
+                <div class="forecast" v-for="(forecast, index) in theWeather" v-if="index===0" :key="forecast.dt">
+                    <p>Current Temp: <em>{{forecast.main.temp}}&#176F</em></p>
                     <p>{{forecast.dt_txt}}</p>
+                    <p>Description: {{forecast.weather[0].description}}</p>
                 </div><!--end of day1-->
                 <div class="forecast" v-if="index===8" v-for="(forecast, index) in theWeather" :key="forecast.dt">
-                    <h2>{{forecast.main.temp}}&#176F</h2>
+                    <p>Current Temp: <em>{{forecast.main.temp}}&#176F</em></p>
                     <p>{{forecast.dt_txt}}</p>
+                    <p>Description: {{forecast.weather[0].description}}</p>
                 </div><!--end of day2-->
                 <div class="forecast" v-if="index===16" v-for="(forecast, index) in theWeather" :key="forecast.dt">
-                    <h2>{{forecast.main.temp}}&#176F</h2>
-                    
+                    <p>Current Temp: <em>{{forecast.main.temp}}&#176F</em></p>
                     <p>{{forecast.dt_txt}}</p>
+                    <p>Description: {{forecast.weather[0].description}}</p>
                 </div><!--end of day3-->
                 <div class="forecast" v-if="index===24" v-for="(forecast, index) in theWeather" :key="forecast.dt">
-                    <h2>{{forecast.main.temp}}&#176F</h2>
+                    <p>Current Temp: <em>{{forecast.main.temp}}&#176F</em></p>
                     <p>{{forecast.dt_txt}}</p>
+                    <p>Description: {{forecast.weather[0].description}}</p>
                 </div><!--end of day4-->
                 <div class="forecast" v-if="index===32" v-for="(forecast, index) in theWeather" :key="forecast.dt">
-                    <h2>{{forecast.main.temp}}&#176F</h2>
-                    
+                    <p>Current Temp: <em>{{forecast.main.temp}}&#176F</em></p>
                     <p>{{forecast.dt_txt}}</p>
+                    <p>Description: {{forecast.weather[0].description}}</p>
                 </div><!--end of day5-->
             </div><!--end of five-day-forecast-->
             
@@ -46,46 +51,3 @@
         <script src="js/script.js"></script>
     </body>
 </html>
-<!--<div id="app">
-    <div v-for="forecast in weather" :key="forecast.id">
-        <p>{{forecast.min_temp}}</p>
-        <p>{{forecast.max_temp}}</p>
-    </div>
-</div>-->
-
-<!-- <div class="forecast" id="day-1">
-                <h2>55&#176F</h2>
-                <h4>May 2, 2019</h4>
-                <p><strong>max:</strong>60&#176F</p>
-                <p><strong>min:</strong>50&#176F</p>
-                <p>Weather condition...</p>
-            </div>
-            <div class="forecast" id="day-2">
-                <h2>58&#176F</h2>
-                <h4>May 3, 2019</h4>
-                <p><strong>max:</strong>64&#176F</p>
-                <p><strong>min:</strong>50&#176F</p>
-                <p>Weather condition...</p>
-
-            </div>
-            <div class="forecast" id="day-3">
-                <h2>65&#176F</h2>
-                <h4>May 4, 2019</h4>
-                <p><strong>max:</strong>70&#176F</p>
-                <p><strong>min:</strong>55&#176F</p>
-                <p>Weather condition...</p>
-            </div>
-            <div class="forecast" id="day-4">
-                <h2>72&#176F</h2>
-                <h4>May 5, 2019</h4>
-                <p><strong>max:</strong>75&#176F</p>
-                <p><strong>min:</strong>68&#176F</p>
-                <p>Weather condition...</p>
-            </div>
-            <div class="forecast" id="day-5">
-                <h2>60&#176F</h2>
-                <h4>May 6, 2019</h4>
-                <p><strong>max:</strong>63&#176F</p>
-                <p><strong>min:</strong>50&#176F</p>
-                <p>Weather condition...</p>
-            </div>-->
