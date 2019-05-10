@@ -8,18 +8,38 @@
     <body>
         <h1>Rooftop Forecasting</h1>
         <h3>Minneapolis, MN</h3>
-        <div class="five-day-forecast" id="app">
-            <div v-for="(forecast, index) in weather" :key="forecast.dt">
-            <p v-if="index===0">{{forecast.dt_txt}}</p>
-            <p v-if="index===8">{{forecast.dt_txt}}</p>
-            <p v-if="index===16">{{forecast.dt_txt}}</p>
-
-            </div>
-            <div>
-                <p>{{current.main}}</p>
-            </div>
-           
-        </div>
+        <div id="app" v-cloak>
+            <div class="todays-forecast">
+                <p>Today's forecast</p>
+                <h2>{{current.main.temp}}&#176F</h2>
+                <p>Description: {{current.weather[0].description}}</p>
+            </div><!--end of .todays-forecast-->
+            <div class="five-day-forecast">
+                <div class="forecast" v-if="index===0" v-for="(forecast, index) in theWeather" :key="forecast.dt">
+                    <h2>{{forecast.main.temp}}&#176F</h2>
+                    <p>{{forecast.dt_txt}}</p>
+                </div><!--end of day1-->
+                <div class="forecast" v-if="index===8" v-for="(forecast, index) in theWeather" :key="forecast.dt">
+                    <h2>{{forecast.main.temp}}&#176F</h2>
+                    <p>{{forecast.dt_txt}}</p>
+                </div><!--end of day2-->
+                <div class="forecast" v-if="index===16" v-for="(forecast, index) in theWeather" :key="forecast.dt">
+                    <h2>{{forecast.main.temp}}&#176F</h2>
+                    
+                    <p>{{forecast.dt_txt}}</p>
+                </div><!--end of day3-->
+                <div class="forecast" v-if="index===24" v-for="(forecast, index) in theWeather" :key="forecast.dt">
+                    <h2>{{forecast.main.temp}}&#176F</h2>
+                    <p>{{forecast.dt_txt}}</p>
+                </div><!--end of day4-->
+                <div class="forecast" v-if="index===32" v-for="(forecast, index) in theWeather" :key="forecast.dt">
+                    <h2>{{forecast.main.temp}}&#176F</h2>
+                    
+                    <p>{{forecast.dt_txt}}</p>
+                </div><!--end of day5-->
+            </div><!--end of five-day-forecast-->
+            
+        </div><!--end of vue #app-->
         
         <script src="vendors/axios.js"></script>
         <script src="vendors/vue.js"></script>

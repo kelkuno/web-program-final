@@ -2,7 +2,7 @@ var baseURL = "https://api.openweathermap.org";
 var vm = new Vue ({
     el: "#app",
     data: {
-        weather: [],
+        theWeather: [],
         current: {}
 
     },
@@ -10,7 +10,7 @@ var vm = new Vue ({
         getWeather: function () {
             axios.get(baseURL + "/data/2.5/forecast?id=5037649&units=imperial&APPID=1c1c263df2c51f2f988897655b61c6e9").then(function(response){
                 console.log(response);
-                vm.weather = response.data.list;
+                vm.theWeather = response.data.list;
             });
         },
         getCurrentWeather: function () {
