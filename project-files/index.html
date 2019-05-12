@@ -7,7 +7,7 @@
     </head>
     <body>
         <h1>Rooftop Forecasting</h1>
-        <h4>Is it warm enough to get happy hour outside?</h4>
+        <h4>Is it good weather for happy hour outside?</h4>
         <h3>Minneapolis, MN</h3>
         <div id="app" v-cloak>
             <h5>Today's forecast</h5>
@@ -18,27 +18,27 @@
             <h5>5-Day Forecast</h5>
             <div class="five-day-forecast">
                 <div class="forecast" v-for="(forecast, index) in theWeather" v-if="index===0" :key="forecast.dt">
-                    <p>Current Temp: <em>{{forecast.main.temp}}&#176F</em></p>
+                    <p>Average Temp: <em>{{forecast.main.temp}}&#176F</em></p>
                     <p>{{forecast.dt_txt}}</p>
                     <p>Description: {{forecast.weather[0].description}}</p>
                 </div><!--end of day1-->
                 <div class="forecast" v-if="index===8" v-for="(forecast, index) in theWeather" :key="forecast.dt">
-                    <p>Current Temp: <em>{{forecast.main.temp}}&#176F</em></p>
+                    <p>Average Temp: <em>{{forecast.main.temp}}&#176F</em></p>
                     <p>{{forecast.dt_txt}}</p>
                     <p>Description: {{forecast.weather[0].description}}</p>
                 </div><!--end of day2-->
                 <div class="forecast" v-if="index===16" v-for="(forecast, index) in theWeather" :key="forecast.dt">
-                    <p>Current Temp: <em>{{forecast.main.temp}}&#176F</em></p>
+                    <p>Average Temp: <em>{{forecast.main.temp}}&#176F</em></p>
                     <p>{{forecast.dt_txt}}</p>
                     <p>Description: {{forecast.weather[0].description}}</p>
                 </div><!--end of day3-->
                 <div class="forecast" v-if="index===24" v-for="(forecast, index) in theWeather" :key="forecast.dt">
-                    <p>Current Temp: <em>{{forecast.main.temp}}&#176F</em></p>
+                    <p>Average Temp: <em>{{forecast.main.temp}}&#176F</em></p>
                     <p>{{forecast.dt_txt}}</p>
                     <p>Description: {{forecast.weather[0].description}}</p>
                 </div><!--end of day4-->
                 <div class="forecast" v-if="index===32" v-for="(forecast, index) in theWeather" :key="forecast.dt">
-                    <p>Current Temp: <em>{{forecast.main.temp}}&#176F</em></p>
+                    <p>Average Temp: <em>{{forecast.main.temp}}&#176F</em></p>
                     <p>{{forecast.dt_txt}}</p>
                     <p>Description: {{forecast.weather[0].description}}</p>
                 </div><!--end of day5-->
